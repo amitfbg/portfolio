@@ -84,7 +84,7 @@ const Home = () => {
         <ProfileDetailsSection>
           <SocialLinks>F I </SocialLinks>
           <ProfileName>
-            Hello, I'M<span>Amit</span>
+            Hello, I'M<span> Amit</span>
           </ProfileName>
           <ProfileRoles>
             <Typical
