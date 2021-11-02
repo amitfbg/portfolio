@@ -10,6 +10,7 @@ const Container = styled.div`
   background-color: aliceblue;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
 `;
 const ProfileDetailsSection = styled.div``;
 const ProfilePictureSection = styled.div`
@@ -20,7 +21,7 @@ const ProfilePictureSection = styled.div`
   border-radius: 50%;
   height: 20rem;
   width: 20rem;
-  margin-left: 10rem;
+  margin-left: 2rem;
 `;
 const SocialLinks = styled.div``;
 const ProfileName = styled.div`
