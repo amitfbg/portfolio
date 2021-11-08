@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import styled from "styled-components";
+import PageHeader from "../../components/pageHeader/PageHeader";
 import CommonCard from "./components/CommonCard";
 import ProgrammingCard from "./components/ProgrammingCard";
 import { resumeData, resumeOptions } from "./utils";
@@ -10,23 +11,6 @@ const Container = styled.div`
   background-color: aliceblue;
   padding: 2rem 2rem 0 2rem;
 `;
-
-const ContainerHeadSection = styled.div`
-  height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const ContainerHeadTitle = styled.div`
-  font-size: 2.5rem;
-  font-weight: bold;
-`;
-const ContainerHeadSubTitle = styled.div`
-  font-size: 1.25rem;
-  font-weight: 400;
-`;
-
 const ContainerMainSection = styled.div`
   display: flex;
   height: 65vh;
@@ -58,7 +42,7 @@ const Tab = styled.div`
   opacity: 0.5;
   ${({ isSelected }) =>
     isSelected &&
-    `color: #000;border-radius:0rem 5rem 5rem 0rem;opacity:1;background-color: aqua;`}
+    `color: #ffffff;border-radius:0rem 5rem 5rem 0rem;opacity:1;background-color: #e20074;`}
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -81,7 +65,7 @@ export default function Resume() {
 
   const getCurrentTabContent = (key, data) => {
     if (key === "Education") {
-      return data?.map((currData, index) => (
+      return data?.map((currData) => (
         <CommonCard
           title={currData?.nameOfInstitution}
           duration={currData?.duration}
@@ -89,7 +73,7 @@ export default function Resume() {
         />
       ));
     } else if (key === "Work History") {
-      return data?.map((currData, index) => (
+      return data?.map((currData) => (
         <CommonCard
           title={currData?.nameOfCompany}
           duration={currData?.duration}
@@ -98,14 +82,14 @@ export default function Resume() {
         />
       ));
     } else if (key === "Programming Skills") {
-      return data?.map((currData, index) => (
+      return data?.map((currData) => (
         <ProgrammingCard
           width={currData?.value}
           subtitle={currData?.nameOfSkill}
         />
       ));
     } else if (key === "Projects") {
-      return data?.map((currData, index) => (
+      return data?.map((currData) => (
         <CommonCard
           title={currData?.nameOfProject}
           duration={currData?.duration}
@@ -114,7 +98,7 @@ export default function Resume() {
         />
       ));
     } else {
-      return data?.map((currData, index) => (
+      return data?.map((currData) => (
         <CommonCard
           title={currData?.nameOfInterest}
           subtitle={currData?.briefIntro}
@@ -133,10 +117,7 @@ export default function Resume() {
 
   return (
     <Container>
-      <ContainerHeadSection>
-        <ContainerHeadTitle>Resume</ContainerHeadTitle>
-        <ContainerHeadSubTitle>My Formal Bio Details</ContainerHeadSubTitle>
-      </ContainerHeadSection>
+      <PageHeader title="Resume" subtitle="My Formal Bio Details" />
       <ContainerMainSection>
         <LeftSection>
           {resumeOptions?.map((currOption) => (

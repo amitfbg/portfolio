@@ -3,6 +3,10 @@ import WorkIcon from "../../assets/Icons/work-icon.png";
 import ProjectIcon from "../../assets/Icons/projects-icon.png";
 import SkillIcon from "../../assets/Icons/skills-icon.png";
 import InterestIcon from "../../assets/Icons/interests-icon.png";
+import LinkedinLogo from "../../assets/Icons/LinkedinLogo";
+import InstagramLogo from "../../assets/Icons/InstagramLogo";
+import GithubLogo from "../../assets/Icons/GithubLogo";
+import TwitterLogo from "../../assets/Icons/TwitterLogo";
 
 export const resumeData = {
   Education: [
@@ -71,4 +75,11 @@ export const resumeOptions = [
   { label: "Programming Skills", icon: SkillIcon },
   { label: "Projects", icon: ProjectIcon },
   { label: "Interests", icon: InterestIcon },
+];
+
+export const socialLogos = [
+  { icon: <TwitterLogo /> },
+  { icon: <LinkedinLogo /> },
+  { icon: <InstagramLogo /> },
+  { icon: <GithubLogo /> },
 ];

@@ -1,23 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import BackgroundImage from "../../assets/Images/Amit_Kumar.jpg";
+import PageHeader from "../../components/pageHeader/PageHeader";
 
 const Container = styled.div`
   min-height: 100vh;
   background-color: #1a1a1d;
   padding: 2rem 2rem 0 2rem;
-`;
-const ContainerHeadSection = styled.div`
-  height: 15vh;
-  text-align: center;
-  color: #08fdd8;
-`;
-
-const ContainerHeadTitle = styled.div`
-  font-size: 3.5rem;
-  font-weight: bold;
-  display: inline-block;
-  transition: all 0.3s ease-out;
 `;
 
 const ContainerBodySection = styled.div`
@@ -100,9 +89,7 @@ const keyDetails = [
 function About() {
   return (
     <Container>
-      <ContainerHeadSection>
-        <ContainerHeadTitle>My, Myself & I</ContainerHeadTitle>
-      </ContainerHeadSection>
+      <PageHeader title="My, Myself & I" />
       <ContainerBodySection>
         <Hi>Hi!</Hi>
         <Bio>

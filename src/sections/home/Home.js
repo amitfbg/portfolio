@@ -3,15 +3,25 @@ import styled from "styled-components";
 import Header from "../../components/header/Header";
 import Typical from "react-typical";
 import BackgroundImage from "../../assets/Images/Amit_Kumar.jpg";
+import { socialLogos } from "../resume/utils";
 
 const Container = styled.div`
-  display: flex;
-  height: 100vh;
+  min-height: 100vh;
   background-color: aliceblue;
-  align-items: center;
-  justify-content: center;
   padding: 0 2rem;
 `;
+const ContainerHeadSection = styled.div`
+  height: 15vh;
+  text-align: center;
+  margin-bottom: 1rem;
+`;
+const ContainerBodySection = styled.div`
+  height: calc(100vh - 15vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const ProfileDetailsSection = styled.div``;
 const ProfilePictureSection = styled.div`
   display: flex;
@@ -23,7 +33,34 @@ const ProfilePictureSection = styled.div`
   width: 20rem;
   margin-left: 2rem;
 `;
-const SocialLinks = styled.div``;
+const SocialLinks = styled.div`
+  padding: 0.25rem 0.25rem 0.25rem 0;
+  display: flex;
+`;
+const StyledIcon = styled.div`
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  &:hover {
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      path {
+        fill: #08fdd8;
+      }
+    }
+  }
+`;
+
 const ProfileName = styled.div`
   font-size: 1.5rem;
 `;
@@ -39,7 +76,7 @@ const ProfileRoleTagline = styled.div`
   margin-top: 0.25rem;
 `;
 const ProfileOptions = styled.div`
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 `;
 const HireMeButton = styled.button`
   padding: 1rem;
@@ -80,39 +117,53 @@ const ProfilePic = styled.div`
 const Home = () => {
   return (
     <>
-      {/* <Header /> */}
       <Container>
-        <ProfileDetailsSection>
-          <SocialLinks>F I </SocialLinks>
-          <ProfileName>
-            Hello, I'M<span> Amit</span>
-          </ProfileName>
-          <ProfileRoles>
-            <Typical
-              loop={Infinity}
-              steps={[
-                "Enthusiastic Dev ",
-                1000,
-                "Full Stack Developer ",
-                1000,
-                "MERN Developer ",
-                1000,
-                "CP enthusiastic ",
-                1000,
-              ]}
-            />
-          </ProfileRoles>
-          <ProfileRoleTagline>
-            Knack of building application with front and back end operations.
-          </ProfileRoleTagline>
-          <ProfileOptions>
-            <HireMeButton>Hire Me</HireMeButton>
-            <ResumeButton>Get Resume</ResumeButton>
-          </ProfileOptions>
-        </ProfileDetailsSection>
-        <ProfilePictureSection>
-          <ProfilePic />
-        </ProfilePictureSection>
+        <ContainerHeadSection>
+          <Header />
+        </ContainerHeadSection>
+        <ContainerBodySection>
+          <ProfileDetailsSection>
+            <SocialLinks>
+              {socialLogos?.map((currObj) => (
+                <StyledIcon>{currObj?.icon}</StyledIcon>
+              ))}
+            </SocialLinks>
+            <ProfileName>
+              Hello, I'M
+              <span
+                style={{ color: "red", fontSize: "2rem", fontWeight: "bold" }}
+              >
+                {" "}
+                Amit
+              </span>
+            </ProfileName>
+            <ProfileRoles>
+              <Typical
+                loop={Infinity}
+                steps={[
+                  "Enthusiastic Dev ",
+                  1000,
+                  "Full Stack Developer ",
+                  1000,
+                  "MERN Developer ",
+                  1000,
+                  "CP enthusiastic ",
+                  1000,
+                ]}
+              />
+            </ProfileRoles>
+            <ProfileRoleTagline>
+              Knack of building application with front and back end operations.
+            </ProfileRoleTagline>
+            <ProfileOptions>
+              <HireMeButton>Hire Me</HireMeButton>
+              <ResumeButton>Get Resume</ResumeButton>
+            </ProfileOptions>
+          </ProfileDetailsSection>
+          <ProfilePictureSection>
+            <ProfilePic />
+          </ProfilePictureSection>
+        </ContainerBodySection>
       </Container>
     </>
   );

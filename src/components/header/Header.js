@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import ALogo from "../../assets/Icons/ALogo";
 
 const Container = styled.div`
   display: flex;
+  height: 100%;
+  align-items: center;
   justify-content: space-between;
-  margin: 2rem 1rem 2rem 2rem;
 `;
 const ContainerLeft = styled.div``;
 const ContainerRight = styled.div``;
@@ -15,12 +17,18 @@ const Menu = styled.a`
   color: #000000;
   padding: 0.5rem 0.75rem;
   text-decoration: none;
-  /* &:nth-last-child() {
-    padding-left: 0;
+`;
+const StyledIcon = styled.div`
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  svg {
+    width: 3.8rem;
+    height: 3.8rem;
   }
-  &:nth-child(1) {
-    padding-left: 0;
-  } */
 `;
 
 const menuOptions = [
@@ -47,7 +55,11 @@ const renderMenu = () => {
 const Header = () => {
   return (
     <Container>
-      <ContainerLeft>Logo</ContainerLeft>
+      <ContainerLeft>
+        <StyledIcon>
+          <ALogo />
+        </StyledIcon>
+      </ContainerLeft>
       <ContainerRight>{renderMenu()}</ContainerRight>
     </Container>
   );
