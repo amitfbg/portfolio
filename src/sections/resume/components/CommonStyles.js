@@ -14,7 +14,7 @@ export const ContainerHeader = styled.div`
 export const Title = styled.div`
   font-size: 2rem;
   font-weight: bolder;
-  color: darkblue;
+  color: #000000;
   display: flex;
   align-items: center;
 `;
@@ -27,6 +27,7 @@ export const Duration = styled.div`
 `;
 export const SubTitle = styled.div`
   font-size: 1.25rem;
+  color: #191616;
   font-weight: bold;
 `;
 export const Summary = styled.div`

@@ -3,11 +3,14 @@ import styled from "styled-components";
 import Form from "../../components/form/Form";
 import PageHeader from "../../components/pageHeader/PageHeader";
 import { socialLogos } from "../resume/utils";
+import ContactBg from "../../assets/Images/Contact_bg.svg";
 
 const Container = styled.div`
   min-height: 100vh;
-  background-color: aliceblue;
+  background-image: url(${ContactBg});
+  background-size: cover;
   padding: 2rem 2rem 0 2rem;
+  color: #ffffff;
 `;
 
 const Title = styled.div`
@@ -57,7 +60,7 @@ const StyledIcon = styled.div`
       width: 2.5rem;
       height: 2.5rem;
       path {
-        fill: #08fdd8;
+        fill: #1a1a1d;
       }
     }
   }
@@ -76,7 +79,7 @@ function Contact() {
             You can ask your question using the form. You will also find our
             contact details and socials below.
           </SubTitle>
-          <Title color="brown;">Get in touch 🤝 </Title>
+          <Title color="#ef4830;">Get in touch 🤝 </Title>
           <SocialHandleSection>
             {socialLogos?.map((currObj) => (
               <StyledIcon>{currObj?.icon}</StyledIcon>

@@ -2,10 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import BackgroundImage from "../../assets/Images/Amit_Kumar.jpg";
 import PageHeader from "../../components/pageHeader/PageHeader";
+import AboutBg from "../../assets/Images/About_bg.svg";
+import { keyDetails } from "../resume/utils";
 
 const Container = styled.div`
   min-height: 100vh;
-  background-color: #1a1a1d;
+  background-image: url(${AboutBg});
+  background-size: cover;
   padding: 2rem 2rem 0 2rem;
 `;
 
@@ -53,6 +56,8 @@ const Photo = styled.div`
 
 const KeyPointsHead = styled.div`
   font-size: 2rem;
+  color: #ef4830;
+  font-weight: bold;
   margin: 0 0 1rem;
 `;
 const KeyPointsBody = styled.div`
@@ -77,14 +82,6 @@ const TabIcon = styled.div`
     margin-right: 0.5rem;
   }
 `;
-
-const keyDetails = [
-  { label: "living in Bangalore", icon: "" },
-  { label: "Part time nerd / Part time creative", icon: "" },
-  { label: "Addicted to social media", icon: "" },
-  { label: "Cricket / Chess", icon: "" },
-  { label: "Passion for the profession", icon: "" },
-];
 
 function About() {
   return (

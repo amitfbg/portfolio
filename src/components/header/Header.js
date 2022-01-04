@@ -14,7 +14,7 @@ const MenuContainer = styled.div``;
 const Menu = styled.a`
   font-size: 1rem;
   font-weight: bold;
-  color: #000000;
+  color: #6e6b6b;
   padding: 0.5rem 0.75rem;
   text-decoration: none;
 `;
@@ -32,19 +32,19 @@ const StyledIcon = styled.div`
 `;
 
 const menuOptions = [
-  { id: "Home", lable: "Home", href: "#" },
-  { id: "About", lable: "About Me", href: "#about" },
-  { id: "Resume", lable: "Resume", href: "#resume" },
-  { id: "Contact", lable: "Contact Me", href: "#contact" },
+  { id: "Home", label: "Home", href: "#" },
+  { id: "About", label: "About Me", href: "#about" },
+  { id: "Resume", label: "Resume", href: "#resume" },
+  { id: "Contact", label: "Contact Me", href: "#contact" },
 ];
 
 const renderMenu = () => {
   return (
     <MenuContainer>
-      {menuOptions.map(({ id, lable, href }) => {
+      {menuOptions.map(({ id, label, href }) => {
         return (
           <Menu href={href} key={id}>
-            {lable}
+            {label}
           </Menu>
         );
       })}

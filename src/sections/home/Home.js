@@ -3,11 +3,13 @@ import styled from "styled-components";
 import Header from "../../components/header/Header";
 import Typical from "react-typical";
 import BackgroundImage from "../../assets/Images/Amit_Kumar.jpg";
+import HomeBg from "../../assets/Images/Home_bg.svg";
 import { socialLogos } from "../resume/utils";
 
 const Container = styled.div`
   min-height: 100vh;
-  background-color: aliceblue;
+  background-image: url(${HomeBg});
+  background-size: cover;
   padding: 0 2rem;
 `;
 const ContainerHeadSection = styled.div`
@@ -55,7 +57,7 @@ const StyledIcon = styled.div`
       width: 2.5rem;
       height: 2.5rem;
       path {
-        fill: #08fdd8;
+        fill: #1a1a1d;
       }
     }
   }
@@ -94,7 +96,7 @@ const HireMeButton = styled.button`
 `;
 const ResumeButton = styled.button`
   padding: 1rem;
-  background-color: #ff5823;
+  background-color: #ef4830;
   border-radius: 3rem;
   border: none;
   width: 10rem;

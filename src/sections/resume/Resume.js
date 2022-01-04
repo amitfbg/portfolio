@@ -5,10 +5,12 @@ import PageHeader from "../../components/pageHeader/PageHeader";
 import CommonCard from "./components/CommonCard";
 import ProgrammingCard from "./components/ProgrammingCard";
 import { resumeData, resumeOptions } from "./utils";
+import ResumeBg from "../../assets/Images/Resume_bg.svg";
 
 const Container = styled.div`
-  height: 100vh;
-  background-color: aliceblue;
+  min-height: 100vh;
+  background-image: url(${ResumeBg});
+  background-size: cover;
   padding: 2rem 2rem 0 2rem;
 `;
 const ContainerMainSection = styled.div`
@@ -42,7 +44,7 @@ const Tab = styled.div`
   opacity: 0.5;
   ${({ isSelected }) =>
     isSelected &&
-    `color: #ffffff;border-radius:0rem 5rem 5rem 0rem;opacity:1;background-color: #e20074;`}
+    `color: #ffffff;border-radius:0rem 5rem 5rem 0rem;opacity:1;background-color: #1a1a1d;`}
   cursor: pointer;
   display: flex;
   align-items: center;

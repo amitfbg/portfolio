@@ -5,33 +5,31 @@ const MainContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 20px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(8.5px);
   border-radius: 1rem;
-  color: grey;
+  color: #000000;
 `;
 
 const StyledInput = styled.input`
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   box-shadow: 2px 4px 14px 0 rgb(31 38 135 / 40%);
   border-radius: 2rem;
   height: 3rem;
   padding: 1rem;
   border: none;
   outline: none;
-  color: #3c354e;
   font-size: 1rem;
   font-weight: bold;
   width: 90%;
   &:focus {
     display: inline-block;
-    box-shadow: 0 0 0 0.2rem #b9abe0;
+    box-shadow: 0 0 0 0.2rem #d4d0e1;
     backdrop-filter: blur(12rem);
     border-radius: 2rem;
   }
   &::placeholder {
-    color: #b9abe099;
+    color: #d4d0e1;
     font-weight: 100;
     font-size: 1rem;
   }
@@ -44,18 +42,17 @@ const StyledTextArea = styled.textarea`
   padding: 1rem;
   border: none;
   outline: none;
-  color: #3c354e;
   font-size: 1rem;
   font-weight: bold;
   width: 90%;
   &:focus {
     display: inline-block;
-    box-shadow: 0 0 0 0.2rem #b9abe0;
+    box-shadow: 0 0 0 0.2rem #d4d0e1;
     backdrop-filter: blur(12rem);
     border-radius: 2rem;
   }
   &::placeholder {
-    color: #b9abe099;
+    color: #d4d0e1;
     font-weight: 100;
     font-size: 1rem;
   }
@@ -81,7 +78,7 @@ const InputContainer = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  margin: 1rem 0 2rem 0;
+  margin: 0 0 2rem 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -99,7 +96,7 @@ const Label = styled.div`
   padding: 0 1rem 0.5rem;
   font-size: 1.1rem;
   font-weight: bold;
-  color: green;
+  color: #ffffff;
 `;
 const ErrorMessage = styled.div`
   padding: 0.5rem 1rem;

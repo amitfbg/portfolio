@@ -7,6 +7,11 @@ import LinkedinLogo from "../../assets/Icons/LinkedinLogo";
 import InstagramLogo from "../../assets/Icons/InstagramLogo";
 import GithubLogo from "../../assets/Icons/GithubLogo";
 import TwitterLogo from "../../assets/Icons/TwitterLogo";
+import LocationIcon from "../../assets/Icons/location-icon.png";
+import CreativeIcon from "../../assets/Icons/creative-icon.png";
+import ProfessionIcon from "../../assets/Icons/profession-icon.png";
+import SocialMediaIcon from "../../assets/Icons/socialMedia-icon.png";
+import HobbiesIcon from "../../assets/Icons/hobbies-icon.png";
 
 export const resumeData = {
   Education: [
@@ -82,4 +87,12 @@ export const socialLogos = [
   { icon: <LinkedinLogo /> },
   { icon: <InstagramLogo /> },
   { icon: <GithubLogo /> },
+];
+
+export const keyDetails = [
+  { label: "living in Bangalore", icon: LocationIcon },
+  { label: "Part time nerd / Part time creative", icon: CreativeIcon },
+  { label: "Passion for the profession", icon: ProfessionIcon },
+  { label: "Addicted to social media", icon: SocialMediaIcon },
+  { label: "Cricket / Chess", icon: HobbiesIcon },
 ];

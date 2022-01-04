@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
+    <g clip-path="url(&quot;#SvgjsClipPath1125&quot;)" fill="none">
+        <rect width="1440" height="560" x="0" y="0" fill="url(#SvgjsLinearGradient1126)"></rect>
+        <circle r="32.045" cx="1179.81" cy="314.06" fill="#43468b"></circle>
+        <circle r="40.82" cx="1238.36" cy="323.99" fill="#43468b"></circle>
+    </g>
+    <defs>
+        <clipPath id="SvgjsClipPath1125">
+            <rect width="1440" height="560" x="0" y="0"></rect>
+        </clipPath>
+        <linearGradient x1="15.28%" y1="-39.29%" x2="84.72%" y2="139.29%" gradientUnits="userSpaceOnUse" id="SvgjsLinearGradient1126">
+            <stop stop-color="#0e2a47" offset="0"></stop>
+            <stop stop-color="rgba(59, 58, 48, 1)" offset="1"></stop>
+        </linearGradient>
+    </defs>
+</svg>
