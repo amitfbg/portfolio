@@ -22,13 +22,13 @@ const ContainerBodySection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 769.98px) {
+  @media (max-width: 767.98px) {
     flex-direction: column-reverse;
   }
 `;
 
 const ProfileDetailsSection = styled.div`
-  @media (max-width: 769.98px) {
+  @media (max-width: 767.98px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@ const ProfilePictureSection = styled.div`
   height: 20rem;
   width: 20rem;
   margin-left: 2rem;
-  @media (max-width: 769.98px) {
+  @media (max-width: 767.98px) {
     height: 18rem;
     width: 18rem;
     margin: 0 1rem 1rem;
@@ -93,7 +93,7 @@ const ProfileRoleTagline = styled.div`
 `;
 const ProfileOptions = styled.div`
   margin: 1rem 0;
-  @media (max-width: 769.98px) {
+  @media (max-width: 767.98px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,7 +112,7 @@ const HireMeButton = styled.button`
   cursor: pointer;
   border: none;
   margin-right: 1rem;
-  @media (max-width: 769.98px) {
+  @media (max-width: 767.98px) {
     margin: 0 0 0.5rem 0;
   }
 `;

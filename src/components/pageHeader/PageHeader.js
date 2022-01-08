@@ -5,6 +5,9 @@ const ContainerHeadSection = styled.div`
   height: 15vh;
   text-align: center;
   margin-bottom: 1rem;
+  @media (max-width: 435px) {
+    height: fit-content;
+  }
 `;
 
 const ContainerHeadTitle = styled.div`

@@ -32,17 +32,23 @@ const Bio = styled.div`
 const FunFacts = styled.div`
   width: 100%;
   display: flex;
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const KeyPoints = styled.div`
   width: 50%;
   padding: 1.25rem;
   color: #fff;
+  @media (max-width: 767.98px) {
+    width: 100%;
+  }
 `;
 const Photo = styled.div`
   width: 50%;
   padding: 1.25rem;
-  height: auto;
   vertical-align: middle;
   & img {
     height: 20rem;
@@ -51,6 +57,11 @@ const Photo = styled.div`
     border-width: 1px 1px 1px 1px;
     border-color: rgba(2, 1, 1, 0);
     border-radius: 0 35px 0 35px;
+  }
+  @media (max-width: 767.98px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 `;
 
@@ -86,7 +97,7 @@ const TabIcon = styled.div`
 function About() {
   return (
     <Container id="about">
-      <PageHeader title="My, Myself & I" />
+      <PageHeader title="My, Myself & I" subtitle="A brief into about me" />
       <ContainerBodySection>
         <Hi>Hi!</Hi>
         <Bio>
