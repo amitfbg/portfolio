@@ -68,7 +68,7 @@ const StyledIcon = styled.div`
 
 function Contact() {
   return (
-    <Container>
+    <Container id="contact">
       <PageHeader title="Contact Me" subtitle="Let's get in touch" />
       <ContainerBodySection>
         <BodyRightSection>

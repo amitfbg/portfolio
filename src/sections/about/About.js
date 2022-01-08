@@ -85,7 +85,7 @@ const TabIcon = styled.div`
 
 function About() {
   return (
-    <Container>
+    <Container id="about">
       <PageHeader title="My, Myself & I" />
       <ContainerBodySection>
         <Hi>Hi!</Hi>

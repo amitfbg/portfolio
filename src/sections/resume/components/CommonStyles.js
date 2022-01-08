@@ -10,6 +10,8 @@ export const ContainerHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: transform 1s ease-out;
+  /* transform:tr; */
 `;
 export const Title = styled.div`
   font-size: 2rem;

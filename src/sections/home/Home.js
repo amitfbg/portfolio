@@ -18,13 +18,22 @@ const ContainerHeadSection = styled.div`
   margin-bottom: 1rem;
 `;
 const ContainerBodySection = styled.div`
-  height: calc(100vh - 15vh);
+  min-height: calc(100vh - 15vh);
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 769.98px) {
+    flex-direction: column-reverse;
+  }
 `;
 
-const ProfileDetailsSection = styled.div``;
+const ProfileDetailsSection = styled.div`
+  @media (max-width: 769.98px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
 const ProfilePictureSection = styled.div`
   display: flex;
   align-items: center;
@@ -34,6 +43,11 @@ const ProfilePictureSection = styled.div`
   height: 20rem;
   width: 20rem;
   margin-left: 2rem;
+  @media (max-width: 769.98px) {
+    height: 18rem;
+    width: 18rem;
+    margin: 0 1rem 1rem;
+  }
 `;
 const SocialLinks = styled.div`
   padding: 0.25rem 0.25rem 0.25rem 0;
@@ -79,6 +93,11 @@ const ProfileRoleTagline = styled.div`
 `;
 const ProfileOptions = styled.div`
   margin: 1rem 0;
+  @media (max-width: 769.98px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const HireMeButton = styled.button`
   padding: 1rem;
@@ -93,6 +112,9 @@ const HireMeButton = styled.button`
   cursor: pointer;
   border: none;
   margin-right: 1rem;
+  @media (max-width: 769.98px) {
+    margin: 0 0 0.5rem 0;
+  }
 `;
 const ResumeButton = styled.button`
   padding: 1rem;
@@ -118,56 +140,54 @@ const ProfilePic = styled.div`
 
 const Home = () => {
   return (
-    <>
-      <Container>
-        <ContainerHeadSection>
-          <Header />
-        </ContainerHeadSection>
-        <ContainerBodySection>
-          <ProfileDetailsSection>
-            <SocialLinks>
-              {socialLogos?.map((currObj) => (
-                <StyledIcon>{currObj?.icon}</StyledIcon>
-              ))}
-            </SocialLinks>
-            <ProfileName>
-              Hello, I'M
-              <span
-                style={{ color: "red", fontSize: "2rem", fontWeight: "bold" }}
-              >
-                {" "}
-                Amit
-              </span>
-            </ProfileName>
-            <ProfileRoles>
-              <Typical
-                loop={Infinity}
-                steps={[
-                  "Enthusiastic Dev ",
-                  1000,
-                  "Full Stack Developer ",
-                  1000,
-                  "MERN Developer ",
-                  1000,
-                  "CP enthusiastic ",
-                  1000,
-                ]}
-              />
-            </ProfileRoles>
-            <ProfileRoleTagline>
-              Knack of building application with front and back end operations.
-            </ProfileRoleTagline>
-            <ProfileOptions>
-              <HireMeButton>Hire Me</HireMeButton>
-              <ResumeButton>Get Resume</ResumeButton>
-            </ProfileOptions>
-          </ProfileDetailsSection>
-          <ProfilePictureSection>
-            <ProfilePic />
-          </ProfilePictureSection>
-        </ContainerBodySection>
-      </Container>
-    </>
+    <Container id="home">
+      <ContainerHeadSection>
+        <Header />
+      </ContainerHeadSection>
+      <ContainerBodySection>
+        <ProfileDetailsSection>
+          <SocialLinks>
+            {socialLogos?.map((currObj) => (
+              <StyledIcon>{currObj?.icon}</StyledIcon>
+            ))}
+          </SocialLinks>
+          <ProfileName>
+            Hello, I'M
+            <span
+              style={{ color: "red", fontSize: "2rem", fontWeight: "bold" }}
+            >
+              {" "}
+              Amit
+            </span>
+          </ProfileName>
+          <ProfileRoles>
+            <Typical
+              loop={Infinity}
+              steps={[
+                "Enthusiastic Dev ",
+                1000,
+                "Full Stack Developer ",
+                1000,
+                "MERN Developer ",
+                1000,
+                "CP enthusiastic ",
+                1000,
+              ]}
+            />
+          </ProfileRoles>
+          <ProfileRoleTagline>
+            Knack of building application with front and back end operations.
+          </ProfileRoleTagline>
+          <ProfileOptions>
+            <HireMeButton>Hire Me</HireMeButton>
+            <ResumeButton>Get Resume</ResumeButton>
+          </ProfileOptions>
+        </ProfileDetailsSection>
+        <ProfilePictureSection>
+          <ProfilePic />
+        </ProfilePictureSection>
+      </ContainerBodySection>
+    </Container>
   );
 };
 

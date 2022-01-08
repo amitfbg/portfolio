@@ -14,9 +14,12 @@ const MenuContainer = styled.div``;
 const Menu = styled.a`
   font-size: 1rem;
   font-weight: bold;
-  color: #6e6b6b;
+  color: #ffffff;
   padding: 0.5rem 0.75rem;
   text-decoration: none;
+  &:hover {
+    color: #1a1a1d;
+  }
 `;
 const StyledIcon = styled.div`
   height: 4rem;
@@ -32,7 +35,7 @@ const StyledIcon = styled.div`
 `;
 
 const menuOptions = [
-  { id: "Home", label: "Home", href: "#" },
+  { id: "Home", label: "Home", href: "#home" },
   { id: "About", label: "About Me", href: "#about" },
   { id: "Resume", label: "Resume", href: "#resume" },
   { id: "Contact", label: "Contact Me", href: "#contact" },

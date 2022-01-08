@@ -15,6 +15,7 @@ const ContainerHeadTitle = styled.div`
 const ContainerHeadSubTitle = styled.div`
   font-size: 1.25rem;
   font-weight: 400;
+  color: #ffffff;
 `;
 
 const HorizontalRule = styled.div`
@@ -24,7 +25,6 @@ const HorizontalRule = styled.div`
   border-radius: 1rem;
   background: linear-gradient(to right, #14163c 0%, #03217b 79%);
   margin: 1rem auto;
-  backdrop-filter: blur(25px);
 `;
 
 const DividerLineBlock = styled.div`

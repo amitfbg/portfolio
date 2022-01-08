@@ -118,7 +118,7 @@ export default function Resume() {
   };
 
   return (
-    <Container>
+    <Container id="resume">
       <PageHeader title="Resume" subtitle="My Formal Bio Details" />
       <ContainerMainSection>
         <LeftSection>
