@@ -28,11 +28,15 @@ const RightSection = styled.div`
   overflow-y: auto;
   margin: 1rem;
   padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media (max-width: 767.98px) {
     width: 100%;
     height: 90%;
     margin: 0 0 1rem;
     padding-top: 1rem;
+    justify-content: unset;
   }
 `;
 const CenterSection = styled.div`

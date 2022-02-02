@@ -18,6 +18,9 @@ const Title = styled.div`
   font-weight: bold;
   padding-bottom: 0.5rem;
   color: ${({ color }) => color};
+  @media (max-width: 767.98px) {
+    font-size: 2.5rem;
+  }
 `;
 const SubTitle = styled.div`
   font-size: 1.25rem;
@@ -27,15 +30,29 @@ const SubTitle = styled.div`
 
 const ContainerBodySection = styled.div`
   display: flex;
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const BodyRightSection = styled.div`
   width: 50%;
   padding: 1rem;
+  @media (max-width: 767.98px) {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
 `;
 const BodyLeftSection = styled.div`
   width: 50%;
   padding: 1rem;
+  @media (max-width: 767.98px) {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
 `;
 const SocialHandleSection = styled.div`
   padding: 0.25rem;
@@ -71,7 +88,7 @@ function Contact() {
     <Container id="contact">
       <PageHeader title="Contact Me" subtitle="Let's get in touch" />
       <ContainerBodySection>
-        <BodyRightSection>
+        <BodyLeftSection>
           <Title>
             Do you have a <span style={{ color: "red" }}>question?</span>
           </Title>
@@ -85,10 +102,10 @@ function Contact() {
               <StyledIcon>{currObj?.icon}</StyledIcon>
             ))}
           </SocialHandleSection>
-        </BodyRightSection>
-        <BodyLeftSection>
-          <Form />
         </BodyLeftSection>
+        <BodyRightSection>
+          <Form />
+        </BodyRightSection>
       </ContainerBodySection>
     </Container>
   );
