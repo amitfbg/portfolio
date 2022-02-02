@@ -4,8 +4,8 @@ import ScrollUp from "../../assets/Icons/scroll-up.png";
 
 const Button = styled.div`
   position: fixed;
-  left: 90%;
-  top: 85%;
+  bottom: 10px;
+  right: 10px;
   z-index: 1;
   cursor: pointer;
   color: green;
