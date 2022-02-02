@@ -85,6 +85,11 @@ const ProfileRoles = styled.div`
   font-family: cursive;
   font-weight: 600;
   margin: 1rem 0 1.5rem 0;
+  .styles_typicalWrapper__1_Uvh {
+    @media (max-width: 767.98px) {
+      font-size: 2.25rem;
+    }
+  }
 `;
 
 const ProfileRoleTagline = styled.div`
@@ -164,13 +169,15 @@ const Home = () => {
             <Typical
               loop={Infinity}
               steps={[
-                "Enthusiastic Dev ",
+                "Developer",
                 1000,
-                "Full Stack Developer ",
+                "Enthusiastic Dev",
                 1000,
-                "MERN Developer ",
+                "Full Stack Dev",
                 1000,
-                "CP enthusiastic ",
+                "MERN Developer",
+                1000,
+                "CP Enthusiastic",
                 1000,
               ]}
             />
