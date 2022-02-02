@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import styled from "styled-components";
+import { toast } from "react-toastify";
+import Loading from "./../Loading/index";
 
 const MainContainer = styled.div`
   display: flex;
@@ -67,7 +70,7 @@ const StyledButton = styled.button`
   border: none;
   color: white;
   border-radius: 2rem;
-  cursor: pointer;
+  cursor: ${({ disabled }) => (disabled ? "" : "pointer")};
 `;
 
 const InputContainer = styled.div`
@@ -103,28 +106,88 @@ const ErrorMessage = styled.div`
   color: red;
 `;
 
+const LoadingContainer = styled.div`
+  display: flex;
+  position: relative;
+`;
+
 function Form() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [banner, setBanner] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async () => {
+    try {
+      const dataToPost = {
+        name,
+        email,
+        message,
+      };
+      setIsLoading(true);
+      const response = await axios.post("/contact", dataToPost);
+      if (name.length === 0 || email.length === 0 || message.length === 0) {
+        setBanner(response.data.msg);
+        toast.error(response.data.msg);
+        setIsLoading(false);
+      } else if (response.status === 200) {
+        setBanner(response.data.msg);
+        toast.success(response.data.msg);
+        setIsLoading(false);
+      }
+    } catch (error) {
+      console.log(error, "ERROR IN SUBMITTING");
+    }
+  };
+
   return (
     <MainContainer>
       <InputContainer>
         <Wrap>
           <Label>Name</Label>
-          <StyledInput type="text" placeholder="Name" />
+          <StyledInput
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
           <ErrorMessage>E</ErrorMessage>
         </Wrap>
         <Wrap>
           <Label>Email</Label>
-          <StyledInput type="email" placeholder="Email" />
+          <StyledInput
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
           <ErrorMessage>E</ErrorMessage>
         </Wrap>
         <Wrap>
           <Label>Message</Label>
-          <StyledTextArea placeholder="Message..." rows="4"></StyledTextArea>
+          <StyledTextArea
+            placeholder="Message..."
+            rows="4"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          />
           <ErrorMessage>E</ErrorMessage>
         </Wrap>
       </InputContainer>
-      <ButtonContainer>
-        <StyledButton>Send</StyledButton>
+      <ButtonContainer onClick={handleSubmit}>
+        <StyledButton disabled={isLoading}>Send</StyledButton>
+        {isLoading && (
+          <LoadingContainer>
+            <Loading />
+          </LoadingContainer>
+        )}
       </ButtonContainer>
     </MainContainer>
   );
