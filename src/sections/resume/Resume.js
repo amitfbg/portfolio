@@ -15,8 +15,12 @@ const Container = styled.div`
 `;
 const ContainerMainSection = styled.div`
   display: flex;
-  height: 65vh;
   justify-content: center;
+  height: 80vh;
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const RightSection = styled.div`
   min-width: 50%;
@@ -24,6 +28,12 @@ const RightSection = styled.div`
   overflow-y: auto;
   margin: 1rem;
   padding-top: 0.5rem;
+  @media (max-width: 767.98px) {
+    width: 100%;
+    height: 90%;
+    margin: 0 0 1rem;
+    padding-top: 1rem;
+  }
 `;
 const CenterSection = styled.div`
   margin: auto 2rem;
@@ -32,10 +42,19 @@ const CenterSection = styled.div`
   border-radius: 1rem;
   background-color: #e0e0e0;
   box-shadow: 2px 2px 5px 0px rgb(0 0 0 / 30%);
+  @media (max-width: 767.98px) {
+    display: none;
+  }
 `;
 const LeftSection = styled.div`
   min-width: 30%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: 767.98px) {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const Tab = styled.div`
