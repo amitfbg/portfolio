@@ -10,7 +10,8 @@ exports.sendMailToUser = (req, res) => {
     data.email.length === 0 ||
     data.message.length === 0
   ) {
-    return res.status(400).json({ msg: "Please fill all fields!" });
+    console.log("HELLp");
+    return res.status(401).json({ msg: "Please fill all fields!" });
   }
 
   const transporter = nodemailer.createTransport({
@@ -36,10 +37,10 @@ exports.sendMailToUser = (req, res) => {
       if (error)
         return res
           .status(535)
-          .json({ msg: "Username and Password not accepted" });
+          .send({ msg: "Username and Password not accepted" });
       return res.status(200).send({ msg: "Thank you for contacting..." });
     } catch (err) {
-      return res.status(500).json({ msg: "Server Error!" });
+      return res.status(500).send({ msg: "Server Error!" });
     }
   });
 };

@@ -2,13 +2,13 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 require("dotenv").config();
-const router = require("./routes/contactRoute");
+const contactRouter = require("./routes/contactRoute");
 
 //applying middleware to make code a bit cleaner
 app.use(express.json());
 app.use(cors());
 
-app.use("/", router);
+app.use("/", contactRouter);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 5000;
