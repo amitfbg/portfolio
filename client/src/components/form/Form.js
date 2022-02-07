@@ -81,7 +81,7 @@ const InputContainer = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  margin: 0 0 2rem 0;
+  margin: 2rem 0 2rem 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@ const ButtonContainer = styled.div`
 `;
 
 const Wrap = styled.div`
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   width: 90%;
   &:nth-child(1) {
     margin-top: 1rem;
@@ -101,9 +101,12 @@ const Label = styled.div`
   font-weight: bold;
   color: #ffffff;
 `;
-const ErrorMessage = styled.div`
+const BannerMessage = styled.div`
   padding: 0.5rem 1rem;
   color: red;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 `;
 
 const LoadingContainer = styled.div`
@@ -115,7 +118,7 @@ function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [banner, setBanner] = useState("");
+  const [bannerMsg, setBannerMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async () => {
@@ -127,23 +130,25 @@ function Form() {
       };
       setIsLoading(true);
       const response = await axios.post("/contact", dataToPost);
-      if (name.length === 0 || email.length === 0 || message.length === 0) {
-        setBanner(response.data.msg);
-        toast.error(response.data.msg);
-        setIsLoading(false);
-      } else if (response.status === 200) {
-        setBanner(response.data.msg);
+      if (response.status === 200) {
+        setBannerMsg(response.data.msg);
         toast.success(response.data.msg);
-        setIsLoading(false);
+        setName("");
+        setEmail("");
+        setMessage("");
       }
     } catch (error) {
-      console.log(error, "ERROR IN SUBMITTING");
+      setBannerMsg("Please fill all the details...");
+      toast.error("Please fill all the details...");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <MainContainer>
       <InputContainer>
+        <BannerMessage>{bannerMsg}</BannerMessage>
         <Wrap>
           <Label>Name</Label>
           <StyledInput
@@ -154,7 +159,6 @@ function Form() {
               setName(e.target.value);
             }}
           />
-          <ErrorMessage>E</ErrorMessage>
         </Wrap>
         <Wrap>
           <Label>Email</Label>
@@ -166,7 +170,6 @@ function Form() {
               setEmail(e.target.value);
             }}
           />
-          <ErrorMessage>E</ErrorMessage>
         </Wrap>
         <Wrap>
           <Label>Message</Label>
@@ -178,7 +181,6 @@ function Form() {
               setMessage(e.target.value);
             }}
           />
-          <ErrorMessage>E</ErrorMessage>
         </Wrap>
       </InputContainer>
       <ButtonContainer onClick={handleSubmit}>
