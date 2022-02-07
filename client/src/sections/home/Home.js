@@ -153,7 +153,9 @@ const Home = () => {
         <ProfileDetailsSection>
           <SocialLinks>
             {socialLogos?.map((currObj) => (
-              <StyledIcon>{currObj?.icon}</StyledIcon>
+              <StyledIcon onClick={() => window.open(currObj?.href, "_blank")}>
+                {currObj?.icon}
+              </StyledIcon>
             ))}
           </SocialLinks>
           <ProfileName>

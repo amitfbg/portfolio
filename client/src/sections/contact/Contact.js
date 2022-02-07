@@ -99,7 +99,9 @@ function Contact() {
           <Title color="#ef4830;">Get in touch 🤝 </Title>
           <SocialHandleSection>
             {socialLogos?.map((currObj) => (
-              <StyledIcon>{currObj?.icon}</StyledIcon>
+              <StyledIcon onClick={() => window.open(currObj?.href, "_blank")}>
+                {currObj?.icon}
+              </StyledIcon>
             ))}
           </SocialHandleSection>
         </BodyLeftSection>

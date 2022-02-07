@@ -83,10 +83,10 @@ export const resumeOptions = [
 ];
 
 export const socialLogos = [
-  { icon: <TwitterLogo /> },
-  { icon: <LinkedinLogo /> },
-  { icon: <InstagramLogo /> },
-  { icon: <GithubLogo /> },
+  { icon: <TwitterLogo />, href: "https://twitter.com/amitfbg" },
+  { icon: <LinkedinLogo />, href: "https://www.linkedin.com/in/amitfbg" },
+  { icon: <InstagramLogo />, href: "https://www.instagram.com/amit_._._._" },
+  { icon: <GithubLogo />, href: "https://github.com/amitfbg" },
 ];
 
 export const keyDetails = [
