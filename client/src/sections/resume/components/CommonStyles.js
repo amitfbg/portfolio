@@ -44,8 +44,8 @@ export const ContainerBody = styled.div`
   padding-left: 1.5rem;
 `;
 export const BulletPoint = styled.div`
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 8px;
+  width: 8px;
   background-color: black;
   border-radius: 2rem;
   opacity: 0.8;
@@ -82,8 +82,8 @@ export const Progress = styled.div`
 `;
 
 export const BigBulletPoint = styled.div`
-  height: 1rem;
-  width: 1rem;
+  height: 16px;
+  width: 16px;
   background-color: red;
   border-radius: 2rem;
   margin-right: 0.5rem;

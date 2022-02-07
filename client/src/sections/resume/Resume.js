@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import styled from "styled-components";
 import PageHeader from "../../components/pageHeader/PageHeader";
 import CommonCard from "./components/CommonCard";
@@ -23,20 +22,19 @@ const ContainerMainSection = styled.div`
   }
 `;
 const RightSection = styled.div`
-  min-width: 50%;
+  width: 60%;
   max-height: 95%;
   overflow-y: auto;
   margin: 1rem;
   padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   @media (max-width: 767.98px) {
     width: 100%;
     height: 90%;
     margin: 0 0 1rem;
     padding-top: 1rem;
-    justify-content: unset;
   }
 `;
 const CenterSection = styled.div`
@@ -51,7 +49,7 @@ const CenterSection = styled.div`
   }
 `;
 const LeftSection = styled.div`
-  min-width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;

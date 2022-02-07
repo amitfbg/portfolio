@@ -18,8 +18,10 @@ function CommonCard(props) {
     <Container>
       <ContainerHeader>
         <Title>
-          <BigBulletPoint />
-          {title}
+          <div>
+            <BigBulletPoint />
+          </div>
+          <div>{title}</div>
         </Title>
         {duration && <Duration>{duration}</Duration>}
       </ContainerHeader>
@@ -29,7 +31,10 @@ function CommonCard(props) {
           <SummaryContainer>
             {summary?.map((currSummary) => (
               <Summary>
-                <BulletPoint /> {currSummary}
+                <div>
+                  <BulletPoint />
+                </div>
+                <div>{currSummary}</div>
               </Summary>
             ))}
           </SummaryContainer>
