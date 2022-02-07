@@ -19,10 +19,7 @@ const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.location.href = "#home";
   };
 
   useEffect(() => {

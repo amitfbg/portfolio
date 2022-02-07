@@ -188,7 +188,9 @@ const Home = () => {
             Knack of building application with front and back end operations.
           </ProfileRoleTagline>
           <ProfileOptions>
-            <HireMeButton>Hire Me</HireMeButton>
+            <HireMeButton onClick={() => (window.location.href = "#contact")}>
+              Hire Me
+            </HireMeButton>
             <ResumeButton>Get Resume</ResumeButton>
           </ProfileOptions>
         </ProfileDetailsSection>
