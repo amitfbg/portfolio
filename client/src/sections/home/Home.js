@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { saveAs } from "file-saver";
 import Header from "../../components/header/Header";
 import Typical from "react-typical";
 import BackgroundImage from "../../assets/Images/Amit_Kumar.jpg";
 import HomeBg from "../../assets/Images/Home_bg.svg";
 import { socialLogos } from "../resume/utils";
+import Resume from "../../assets/resume/Resume_Amit_Kumar.pdf";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -144,6 +146,10 @@ const ProfilePic = styled.div`
 `;
 
 const Home = () => {
+  const handleDownload = () => {
+    saveAs(Resume, "Resume_Amit_Kumar.pdf");
+  };
+
   return (
     <Container id="home">
       <ContainerHeadSection>
@@ -191,7 +197,7 @@ const Home = () => {
             <HireMeButton onClick={() => (window.location.href = "#contact")}>
               Hire Me
             </HireMeButton>
-            <ResumeButton>Get Resume</ResumeButton>
+            <ResumeButton onClick={handleDownload}>Get Resume</ResumeButton>
           </ProfileOptions>
         </ProfileDetailsSection>
         <ProfilePictureSection>
